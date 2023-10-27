@@ -19,11 +19,12 @@ public class F1 extends Car {
          * speed 201-250: gear 5
          * speed more than 250: gear 6
          */
+        if(newSpeed<0) newSpeed = 0;
 
         if(newSpeed == 0) {
             //Stop the car, set gear as 1
-            super.changeGear(1);
             super.stop();
+            super.changeGear(1);
         }
 
         //for all other cases, change the gear accordingly
